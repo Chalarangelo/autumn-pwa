@@ -5,10 +5,12 @@ import './App.css';
 class Post extends Component {
   render() {
     return (
-      <div style={{border: "1px solid #ddd", padding: "8px", display: "block"}} key={this.props.post.id}>
-        <h3 id={this.props.post.id}>{this.props.post.title}</h3>
-        <img src={this.props.post['image-url']} style={{width: "100%", height: "auto"}}/>
-        <p>{this.props.post.content}</p>
+      <div className="card fluid">
+        <div className="section">
+          <h3 id={this.props.post.id}>{this.props.post.title}<small>by {this.props.post.author} on {new Date(this.props.post['date-added']).toDateString()}</small></h3>
+        </div>
+        <img className="section media" src={this.props.post['image-url']}/>
+        <p className="section">{this.props.post.content}</p>
       </div>
     )
   }
