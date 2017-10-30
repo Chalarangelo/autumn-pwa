@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import logo from '../logo.svg';
+import { viewAll, searchPost } from '../actions';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      searchQuery: ''
+    }
+  }
+
+  viewAll() {
+    this.props.viewAll();
+  }
+
+  searchPost(query){
+    this.props.searchPost(query);
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,4 +35,11 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state){
+  return {
+    posts: state
+  }
+}
+
+// export default App;
+export default connect(mapStateToProps, { viewAll, searchPost })(App);
