@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import './App.css';
 
 class Post extends Component {
@@ -9,7 +8,7 @@ class Post extends Component {
         <div className="section">
           <h3 id={this.props.post.id}>{this.props.post.title}<small>by {this.props.post.author} on {new Date(this.props.post['date-added']).toDateString()}</small></h3>
         </div>
-        <img className="section media" src={this.props.post['image-url']}/>
+        <img className="section media" src={this.props.post['image-url']} alt={this.props.post.title}/>
         <p className="section">{this.props.post.content}</p>
       </div>
     )

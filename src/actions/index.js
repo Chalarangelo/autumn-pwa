@@ -1,4 +1,4 @@
-import { VIEW_ALL, SEARCH_POST, FETCH_POSTS } from '../constants';
+import { VIEW_ALL, SEARCH_POST, UPDATE_POSTS } from '../constants';
 
 export const viewAll = () => {
   return {
@@ -13,10 +13,9 @@ export const searchPost = (query) => {
   }
 }
 
-export const fetchPosts = () => {
-  const request = fetch("https://jsonbin.io/b/59f721644ef213575c9f6531");
+export const updatePosts = (posts) => {
   return {
-    type: FETCH_POSTS,
-    payload: request
-  };
+    type: UPDATE_POSTS,
+    posts
+  }
 }
