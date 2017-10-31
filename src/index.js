@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'preact-compat';
+import ReactDOM from 'preact-compat';
 import './index.css';
 import App from './components/App';
-import { Provider } from 'react-redux';
+import { Provider } from 'preact-redux';
 import { createStore } from 'redux';
 import reducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';

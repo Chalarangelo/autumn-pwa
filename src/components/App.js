@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'preact-compat';
+import { connect } from 'preact-redux';
 import { viewAll, searchPost, updatePosts } from '../actions';
 import './App.css';
 import Post from './Post';
