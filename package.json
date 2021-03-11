@@ -35,7 +35,7 @@
     "preact-redux": "^2.0.3",
     "promise": "8.0.1",
     "react": "^16.0.0",
-    "react-dev-utils": "^4.1.0",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
